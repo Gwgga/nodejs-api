@@ -7,7 +7,11 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
+    res.send('Api Server Fl0');
+})
+
+app.post('/pushover/avizz', (req, res) => {
     const data = req.body;
 
     if (data) {
